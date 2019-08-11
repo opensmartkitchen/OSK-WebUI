@@ -1,0 +1,14 @@
+_NOTES/
+
+Packages
+.build
+xcuserdata
+*.xcodeproj
+DerivedData/
+.DS_Store
+Package.resolved
+
+# Ubuntu Application Document Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+
