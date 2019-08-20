@@ -1,0 +1,15 @@
+#set("title") {Home}
+
+#set("body") {
+
+<h2>Description</h2>
+
+<p>Whether squirrel or human, the food cycle of foraging, stashing, preparing, consuming, sharing and foraging again is a complicated, time-consuming process. Coordinating with the whole family makes for some dramatic chatter.</p>
+
+<p>There needs to be a “hub” that can process data locally that gives users control and respects user privacy. An open solution needs to be created before big business dominates the kitchen.</p>
+
+<p>We are working on a software framework that will run locally on a smart kitchen device. While we will provide an example hardware device, we hope others can use this framework to hack the kitchen with networked devices from the pantry to the fridge.</p>
+
+}
+
+#embed("base")

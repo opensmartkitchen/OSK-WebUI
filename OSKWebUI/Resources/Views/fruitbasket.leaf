@@ -1,0 +1,62 @@
+#set("headadditions"){
+<!-- Custom styles for this template -->
+<link href="styles/frutibasket.css" rel="stylesheet">
+}
+
+#set("title") {Fruit Basket}
+
+#set("body") {
+    <div  class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+       <h1 class="cover-heading">Fruit Basket</h1>
+        <p class="lead">The ÓSK Squirrel Fruit Basket scampers to check all stached food.</p>
+
+        <form action="/fruitbasket">
+          <div class="form-group">
+            <label for="calibrationValue">Calibration Value:</label>
+            <input type="text" class="form-control" id="calibrationValue" name="calibration" aria-describedby="calibrationHelp" placeholder="96670.00">
+            <small id="calibrationHelp" class="form-text text-muted">Enter a calibration value to override default value.<br>The default calibration factor 96670.00 was obtained using the SparkFun_HX711_Calibration Arduino sketch.<br>[units = ?] </small>
+          </div>
+          
+          <p>
+          <button type="submit" class="btn btn-lg btn-primary">Set Calibration</button>
+          </p>
+        </form>
+
+        <!-- WEIGHT -->
+        <form>
+            <div class="form-group">
+                <label>Weight:</label>
+                <blockquote class="blockquote">
+                <p class="mb-0">#get(oskPageWeight)</p>
+                </blockquote>
+        </form>
+
+        <form action="/fruitbasket">
+            <p>
+            <button type="submit" class="btn btn-lg btn-primary">Update Weight</button>
+            </p>
+        </form>
+
+        <!-- SEARCH -->
+        <form action="/fruitbasket">
+          <div class="form-group">
+              <label for="searchFruitname">Fruit Name:</label>
+              <input type="text"  class="form-control" id="fruitnameId" name="fruitname" placeholder="type fruit name here">
+          </div>
+
+              <p>
+              <button type="submit" class="btn btn-lg btn-primary">Search</button>
+              </p>
+         </form>
+
+    </div>
+    </div>
+
+
+    <!-- div class="welcome">
+        <img src="/images/it-works.png">
+    </div -->
+}
+
+#embed("base")
