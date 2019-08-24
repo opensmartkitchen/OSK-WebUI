@@ -1,6 +1,7 @@
 import Vapor
 import OskGadgetCWrapMock
 
+
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
     // GET / home page
@@ -11,10 +12,8 @@ public func routes(_ router: Router) throws {
     // GET /fruitbasket
     router.get("fruitbasket") { req -> Future<View> in
         var weightStr = "unavailable"
-        if let oskGadget = oskGadgetCreate() {
-            let weight = oskGadgetGetScaleWeight(oskGadget)
-            weightStr = String(format:"%.4f", weight)
-        }
+        let weight = oskGadgetGetScaleWeight(oskGadget)
+        weightStr = String(format:"%.4f", weight)
         
         return try req.view().render("fruitbasket",
                                      ["oskPageWeight": weightStr]
