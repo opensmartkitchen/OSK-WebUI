@@ -90,9 +90,10 @@ public func routes(_ router: Router) throws {
         
         return try req.view().render(
             "fruitbasket",
-            ["oskPageWeight": weightStr,
-             "oskPageTimestamp": timestampHumanStr,
-             "oskPageImage": "osk/\(timestampStr)_image.png",   
+            [
+                "oskPageWeight": weightStr,
+                "oskPageTimestamp": timestampHumanStr,
+                "oskPageImage": "osk/\(timestampStr)_image.png",   
                 "oskPageRawData": rawDataStr + " :: " + timestampStr,   
             ]
         )
