@@ -9,37 +9,44 @@
     <div  class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
        <h1 class="cover-heading">Fruit Basket</h1>
-        <p class="lead">The ÓSK Squirrel Fruit Basket scampers to check all stached food.</p>
+        <p class="lead">The ÓSK Squirrel Fruit Basket scampers to check all stashed food.</p>
 
-        <form action="/fruitbasket">
-          <div class="form-group">
-            <label for="calibrationValue">Calibration Value:</label>
-            <input type="text" class="form-control" id="calibrationValue" name="calibration" aria-describedby="calibrationHelp" placeholder="96670.00">
-            <small id="calibrationHelp" class="form-text text-muted">Enter a calibration value to override default value.<br>The default calibration factor 96670.00 was obtained using the SparkFun_HX711_Calibration Arduino sketch.<br>[units = ?] </small>
-          </div>
-          
-          <p>
-          <button type="submit" class="btn btn-lg btn-primary">Set Calibration</button>
-          </p>
-        </form>
 
         <!-- WEIGHT -->
-        <form>
-            <div class="form-group">
-                <label>Weight:</label>
-                <blockquote class="blockquote">
-                <p class="mb-0">#get(oskPageWeight)</p>
-                </blockquote>
-        </form>
-
         <form action="/fruitbasket">
             <p>
-            <button type="submit" class="btn btn-lg btn-primary">Update Weight</button>
+            <button type="submit" class="btn btn-lg btn-primary">Update</button>
             </p>
         </form>
 
+        <form>
+            <div class="form-group">
+                <blockquote class="blockquote">
+                <p class="mb-0">Weight: #get(oskPageWeight) lbs</p>
+                </blockquote>
+            </div>
+            <div class="form-group">
+                <blockquote class="blockquote">
+                <p class="mb-0">Last reading: #get(oskPageTimestamp)</p>
+                </blockquote>
+            </div>
+            
+            <p>
+            <img src="#get(oskPageImage)" class="rounded img-fluid" alt="Responsive image">
+            <em>#get(oskPageImage)</em>
+            </p>
+
+            <div class="form-group">
+                <blockquote class="blockquote">
+                <p class="mb-0">Data: #get(oskPageRawData)</p>
+                </blockquote>
+            </div>
+        </form>
+
+        <!-- Image -->
+
         <!-- SEARCH -->
-        <form action="/fruitbasket">
+        <!--form action="/fruitbasket">
           <div class="form-group">
               <label for="searchFruitname">Fruit Name:</label>
               <input type="text"  class="form-control" id="fruitnameId" name="fruitname" placeholder="type fruit name here">
@@ -48,7 +55,7 @@
               <p>
               <button type="submit" class="btn btn-lg btn-primary">Search</button>
               </p>
-         </form>
+         </form -->
 
     </div>
     </div>

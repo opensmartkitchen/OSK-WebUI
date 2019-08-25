@@ -1,0 +1,83 @@
+#set("headadditions"){
+<!-- Custom styles for this template -->
+<link href="styles/frutibasket.css" rel="stylesheet">
+}
+
+#set("title") {Settings}
+
+#set("body") {
+    <div  class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+       <h1 class="cover-heading">Settings</h1>
+        <p class="lead">Enter settings here for the ÓSK Squirrel Fruit Basket.</p>
+
+        <form action="/settings">
+ 
+<div class="radio">
+<p><h3>Units:</h3>
+  <label>
+    <input type="radio" name="survey" id="Radios1" value="lbs_fraction">
+    lbs (fractional)
+  </label>
+  <label>
+    <input type="radio" name="survey" id="Radios2" value="lbs_oz">
+    lbs/oz
+  </label>
+  <label>
+    <input type="radio" name="survey" id="Radios3" value="metric">
+    metric
+  </label>
+  </p>
+</div>
+            <p>
+            <button type="submit" class="btn btn-lg btn-primary">Update Units</button>
+            </p>
+        </form>
+
+        <!-- WEIGHT TARE -->
+
+        <form action="/settings">
+            <p>
+            <button type="submit" class="btn btn-lg btn-primary">Tare Scale</button>
+            </p>
+        </form>
+
+        <!-- WEIGHT TARE -->
+
+        <form action="/settings">
+          <div class="form-group">
+            <label for="calibrationValue">Calibration Value:</label>
+            <input type="text" class="form-control" id="calibrationValue" name="calibration" aria-describedby="calibrationHelp" placeholder="96670.00">
+            <small id="calibrationHelp" class="form-text text-muted">Enter a calibration value to override default value.<br>The default calibration factor 96670.00 was obtained using the SparkFun_HX711_Calibration Arduino sketch.<br>[units = ?] </small>
+          </div>
+          
+          <p>
+          <button type="submit" class="btn btn-lg btn-primary">Set Scale Calibration</button>
+          </p>
+        </form>
+
+
+        <!-- SEARCH -->
+        <!-- 
+        <form action="/fruitbasket">
+          <div class="form-group">
+              <label for="searchFruitname">Fruit Name:</label>
+              <input type="text"  class="form-control" id="fruitnameId" name="fruitname" placeholder="type fruit name here">
+          </div>
+
+              <p>
+              <button type="submit" class="btn btn-lg btn-primary">Search</button>
+              </p>
+         </form>
+         --> 
+
+    </div>
+    </div>
+
+
+    <!-- div class="welcome">
+        <img src="/images/it-works.png">
+    </div -->
+}
+
+#embed("base")

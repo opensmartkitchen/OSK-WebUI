@@ -14,3 +14,10 @@
 
 _OSK-WebUI is part of the development software for the [Hackaday ÓSK Squirrel](https://hackaday.io/project/165563-sk-squirrel) project._
 
+**OSK Data Spool Setup**
+
+```sh
+sudo mkdir /var/spool/osk-data
+sudo ln -s VAPOR_WEBSERVER_PATH/OSKWebUI/Public/osk /var/spool/osk-data/public
+```
+

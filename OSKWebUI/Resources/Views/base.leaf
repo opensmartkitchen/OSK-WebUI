@@ -57,16 +57,18 @@
     <!-- Define a list of navigation `nav-item` links. -->
     <ul class="navbar-nav mr-auto">
       <!-- Uses vapor leaf 'if' statement to set 'active' menu -->
-      <!-- Home|Settings|Carousel| -->
+      <!-- Home|Fruit Basket|Settings| -->
       <li class="nav-item #if(title == "Fruit Basket"){active}">
         <a href="/fruitbasket" class="nav-link">Fruit Basket</span></a>
       </li>
+      <li class="nav-item #if(title == "Settings"){active}">
+        <a href="/settings" class="nav-link">Settings</span></a>
+      </li>
     </ul>
-    <form class="form-inline"> <!-- mt-2 mt-md-0 -->
+    <!-- form class="form-inline">
       <input class="form-control-sm mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <!-- btn-outline-success|btn-secondary my-2 my-sm-0 -->
       <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
-    </form>
+    </form -->
   </div> <!-- end navbarMainMenusDiv -->
 </nav>
 <!-- </header> -->

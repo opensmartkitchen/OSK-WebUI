@@ -1,6 +1,7 @@
 import Vapor
 import OskGadgetCWrapMock
 
+let oskDataUrl = URL(fileURLWithPath: "/var/spool/osk-data/public/")
 var oskGadget: UnsafeMutableRawPointer!
 
 /// Called after your application has initialized.
@@ -11,5 +12,4 @@ public func boot(_ app: Application) throws {
         return
     }
     oskGadget = oskGadgetPtr
-    
 }
