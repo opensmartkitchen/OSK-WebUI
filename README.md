@@ -1,7 +1,5 @@
 <h1>OSK-WebUI</h1>
 
-_OSK-WebUI is part of the development software for the [Hackaday ÓSK Squirrel](https://hackaday.io/project/165563-sk-squirrel) project._
-
 <p align="center">
     <a href="LICENSE">
         <img src="http://img.shields.io/badge/license-Apache 2.0-brightgreen.svg" alt="MIT License">
